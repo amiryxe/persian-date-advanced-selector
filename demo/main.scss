@@ -8,8 +8,18 @@ body {
 }
 
 h1 {
-  margin-bottom: 4rem;
   font-weight: 900;
+  margin-bottom: 0;
+}
+
+.detail {
+  margin-bottom: 4rem;
+
+  a {
+    text-decoration: none;
+    font-style: italic;
+    color: #263d57;
+  }
 }
 
 .container {

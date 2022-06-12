@@ -6,9 +6,9 @@ function convertPersianDigitsToLatin(str) {
 
 // past year from now
 function subtractDate(type, value, endDate) {
-    const dateArr = convertPersianDigitsToLatin(endDate).split('/').map(Number)
-
     if (endDate) {
+        const dateArr = convertPersianDigitsToLatin(endDate).split('/').map(Number)
+
         return [
             new persianDate(dateArr).subtract(type, value),
             new persianDate(dateArr)

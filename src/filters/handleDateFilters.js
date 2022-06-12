@@ -45,6 +45,15 @@ $('input[name="date-filter"]').on('change', function (e) {
         case 'past_year_end':
             result = subtractDate('years', 1, dateField2.val())
             break;
+        case 'past_month_end':
+            result = subtractDate('months', 1, dateField2.val())
+            break;
+        case 'past_week_end':
+            result = subtractDate('weeks', 1, dateField2.val())
+            break;
+        case 'past_day_end':
+            result = subtractDate('days', 1, dateField2.val())
+            break;
     }
 
     dateField1.val(result[0].format('YYYY/MM/DD'))

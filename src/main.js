@@ -3,4 +3,9 @@ $(document).ready(function () {
         format: 'YYYY/MM/DD',
         autoClose: true,
     });
+
+    $(".date-field2").pDatepicker({
+        format: 'YYYY/MM/DD',
+        autoClose: true,
+    });
 });

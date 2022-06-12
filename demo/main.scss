@@ -9,6 +9,7 @@ body {
 
 h1 {
   margin-bottom: 4rem;
+  font-weight: 900;
 }
 
 .container {
@@ -21,6 +22,9 @@ input[type="text"] {
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 3px;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-family: inherit;
 }
 
 .app {

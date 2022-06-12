@@ -21,12 +21,12 @@ function subtractDate(type, value, endDate) {
     ]
 }
 
+const dateField1 = $('.date-field1')
+const dateField2 = $('.date-field2')
+
 // filter date listener
 $('input[name="date-filter"]').on('change', function (e) {
     const optionTarget = $(e.currentTarget).attr('id')
-    const dateField1 = $('.date-field1')
-    const dateField2 = $('.date-field2')
-
     let result = []
 
     switch (optionTarget) {
@@ -59,5 +59,18 @@ $('input[name="date-filter"]').on('change', function (e) {
     if (optionTarget !== 'custom_date') {
         dateField1.val(result[0].format('YYYY/MM/DD'))
         dateField2.val(result[1].format('YYYY/MM/DD'))
+    }
+})
+
+// past from today by variable amount of time
+$('.past-today-var-fields').on('change', function (e) {
+    const count = Number($('.past-today-var-fields[type=number]').val())
+    const type = $('select.past-today-var-fields').val()
+
+    if (count >= 1) {
+        const [from, to] = subtractDate(type, count)
+
+        dateField1.val(from.format('YYYY/MM/DD'))
+        dateField2.val(to.format('YYYY/MM/DD'))
     }
 })

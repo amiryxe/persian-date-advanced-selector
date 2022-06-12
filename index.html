@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="fa" dir="rtl">
 
 <head>
     <meta charset="UTF-8">
@@ -8,10 +8,43 @@
     <title>Persian Datepicker range selector</title>
 
     <link rel="stylesheet" href="vendor/persian-datapicker/css/persian-datepicker.min.css">
+    <link rel="stylesheet" href="demo/main.css">
 </head>
 
 <body>
-    <input type="text" class="date-field1">
+    <div class="container">
+        <h1>انتخاب‌گر پیشرفته تاریخ شمسی</h1>
+
+        <div class="app">
+            <div class="app__fields">
+                <input type="text" class="date-field1">
+            </div>
+
+            <div class="app__options">
+                <h3>بازه‌ها</h3>
+
+                <label>
+                    <input type="radio" name="date-filter" id="">
+                    <span>سال گذشته</span>
+                </label>
+
+                <label>
+                    <input type="radio" name="date-filter" id="">
+                    <span>ماه گذشته</span>
+                </label>
+
+                <label>
+                    <input type="radio" name="date-filter" id="">
+                    <span>هفته گذشته</span>
+                </label>
+
+                <label>
+                    <input type="radio" name="date-filter" id="">
+                    <span>روز گذشته</span>
+                </label>
+            </div>
+        </div>
+    </div>
 
 
     <script src="vendor/jquery/jquery-3.6.0.min.js"></script>

@@ -56,6 +56,8 @@ $('input[name="date-filter"]').on('change', function (e) {
             break;
     }
 
-    dateField1.val(result[0].format('YYYY/MM/DD'))
-    dateField2.val(result[1].format('YYYY/MM/DD'))
+    if (optionTarget !== 'custom_date') {
+        dateField1.val(result[0].format('YYYY/MM/DD'))
+        dateField2.val(result[1].format('YYYY/MM/DD'))
+    }
 })

@@ -57,7 +57,7 @@
                     </label>
 
                     <label>
-                        <input type="radio" id="past_today_field" class="past-today-var-fields">
+                        <input type="radio" id="past_today_field" name="date-filter" class="past-today-var-fields">
 
                         <input type="number" value="2" class="past-today-var-fields" min="1">
                         <select name="" id="" class="past-today-var-fields">
@@ -77,13 +77,8 @@
                     <h5>به نسبت تاریخ پایان</h5>
 
                     <label>
-                        <input type="radio" name="date-filter" id="past_year_end">
-                        <span>سال گذشته از تاریخ پایان</span>
-                    </label>
-
-                    <label>
-                        <input type="radio" name="date-filter" id="past_month_end">
-                        <span>ماه گذشته از تاریخ پایان</span>
+                        <input type="radio" name="date-filter" id="past_day_end">
+                        <span>روز گذشته از تاریخ پایان</span>
                     </label>
 
                     <label>
@@ -92,12 +87,17 @@
                     </label>
 
                     <label>
-                        <input type="radio" name="date-filter" id="past_day_end">
-                        <span>روز گذشته از تاریخ پایان</span>
+                        <input type="radio" name="date-filter" id="past_month_end">
+                        <span>ماه گذشته از تاریخ پایان</span>
                     </label>
 
                     <label>
-                        <input type="radio" id="past_end_field" class="past-end-var-fields">
+                        <input type="radio" name="date-filter" id="past_year_end">
+                        <span>سال گذشته از تاریخ پایان</span>
+                    </label>
+
+                    <label>
+                        <input type="radio" id="past_end_field" name="date-filter" class="past-end-var-fields">
 
                         <input type="number" value="2" class="past-end-var-fields" min="1">
                         <select name="" id="" class="past-end-var-fields">

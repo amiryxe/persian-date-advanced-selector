@@ -74,3 +74,16 @@ $('.past-today-var-fields').on('change', function (e) {
         dateField2.val(to.format('YYYY/MM/DD'))
     }
 })
+
+// past from end date by variable amount of time
+$('.past-end-var-fields').on('change', function (e) {
+    const count = Number($('.past-end-var-fields[type=number]').val())
+    const type = $('select.past-end-var-fields').val()
+
+    if (count >= 1) {
+        const [from, to] = subtractDate(type, count, dateField2.val())
+
+        dateField1.val(from.format('YYYY/MM/DD'))
+        dateField2.val(to.format('YYYY/MM/DD'))
+    }
+})

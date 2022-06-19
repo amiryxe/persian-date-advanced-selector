@@ -76,9 +76,9 @@ $('.past-today-var-fields').on('change', function (e) {
 })
 
 // past from end date by variable amount of time
-$('.past-end-var-fields').on('change', function (e) {
-    const count = Number($('.past-end-var-fields[type=number]').val())
-    const type = $('select.past-end-var-fields').val()
+$('.var-fields').on('change', function (e) {
+    const count = Number($(e.currentTarget).find('input[type=number]').val())
+    const type = $(e.currentTarget).find('select').val()
 
     if (count >= 1) {
         const [from, to] = subtractDate(type, count, dateField2.val())

@@ -62,26 +62,14 @@ $('input[name="date-filter"]').on('change', function (e) {
     }
 })
 
-// past from today by variable amount of time
-$('.past-today-var-fields').on('change', function (e) {
-    const count = Number($('.past-today-var-fields[type=number]').val())
-    const type = $('select.past-today-var-fields').val()
-
-    if (count >= 1) {
-        const [from, to] = subtractDate(type, count)
-
-        dateField1.val(from.format('YYYY/MM/DD'))
-        dateField2.val(to.format('YYYY/MM/DD'))
-    }
-})
-
 // past from end date by variable amount of time
 $('.var-fields').on('change', function (e) {
     const count = Number($(e.currentTarget).find('input[type=number]').val())
     const type = $(e.currentTarget).find('select').val()
+    const kind = $(e.currentTarget).attr('data-kind')
 
     if (count >= 1) {
-        const [from, to] = subtractDate(type, count, dateField2.val())
+        const [from, to] = kind ? subtractDate(type, count, dateField2.val()) : subtractDate(type, count)
 
         dateField1.val(from.format('YYYY/MM/DD'))
         dateField2.val(to.format('YYYY/MM/DD'))
